@@ -2,84 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="MainPage.css" />
 <style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 7%;
-  height: 100%;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  //padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 90%;
-  border-left: none;
-  height: 700px;
-}
-
-.mainbox {
-  background-color: white;
-  width: 100%;
-  height: 75px;
-  border: 1px solid gray;
-  padding: 10px;
-  //margin: 10px;
-  font-size: 20px
-}
-
-.quicklinksbox {
-  background-color: white;
-  width: 30%;
-  height: 200px;
-  border: 1px solid gray;
-  padding: 10px;
-  margin-top: 25px;
-  margin-left: 15px;
-}
-
-.signout {
-  height: 35px;
-  float: right;
-  font-size: 20px;
-  color: gray;
-  padding-top: 4px;
-  padding-right: 80px;
-  padding-left: 5px;
-}
-
 </style>
 </head>
 <body>
@@ -119,33 +43,337 @@ body {font-family: "Lato", sans-serif;}
 
 	<div class = "quicklinksbox">
 		<p>Quick Links</p>
+		<button class="adminButton" onclick="openTab(event, 'Test')" id="TestPage"> Test </button>
 	</div>
 </div>
 
 <div id="Student" class="tabcontent">
-  <h3>Student</h3>
-  <p>Student info</p> 
+	
+	<div class = "mainbox">
+  		<p>Student Page</p>
+	</div>
+
+	<div class = "studentlinksbox">
+		<p>Student Links</p>
+		<button class="studentButton" onclick="openTab(event, 'ContactAdvisor')" id="ContactAdvisorPage"> Contact Advisor </button>
+		<button class="studentButton" onclick="openTab(event, 'ListCourses')" id="ListCoursesPage"> List Courses </button>
+		<button class="studentButton" onclick="openTab(event, 'RequestPIN')" id="RequestPINPage"> Request PIN </button>
+		<button class="studentButton" onclick="openTab(event, 'EnrollClasses')" id="EnrollClassesPage"> Enroll Classes </button>
+		<button class="studentButton" onclick="openTab(event, 'PrintSchedule')" id="PrintSchedulePage"> Print Schedule </button>
+	</div>
+
 </div>
 
 <div id="Faculty" class="tabcontent">
-  <h3>Faculty</h3>
-  <p>Faculty info</p> 
+
+	<div class = "mainbox">
+  		<p>Faculty Page</p>
+	</div>
+
+	<div class = "facultylinksbox">
+		<p>Faculty Links</p>
+		<button class="facultyButton" onclick="openTab(event, 'ListAdvisers')" id="ListAdvisersPage"> List Advisers </button>
+		<button class="facultyButton" onclick="openTab(event, 'ListClasses')" id="ListClassesPage"> List Classes </button>
+		<button class="facultyButton" onclick="openTab(event, 'TeachingSchedule')" id="TeachingSchedulePage"> Teaching Schedule </button>
+		<button class="facultyButton" onclick="openTab(event, 'ClassRosters')" id="ClassRostersPage"> Class Rosters </button>
+		<button class="facultyButton" onclick="openTab(event, 'PrintStudentSchedule')" id="PrintStudentSchedulePage"> Print Student Schedule </button>
+		<button class="facultyButton" onclick="openTab(event, 'EnrollaStudent')" id="EnrollaStudentPage"> Enroll a Student </button>
+		<button class="facultyButton" onclick="openTab(event, 'RequestOverride')" id="RequestOverridePage"> Request Override </button>
+		<button class="facultyButton" onclick="openTab(event, 'ContactStudents')" id="ContactStudentsPage"> Contact Students </button>
+	</div>
+
 </div>
 
 <div id="Secretary" class="tabcontent">
-  <h3>Secretary</h3>
-  <p>Secretary info</p> 
+
+	<div class = "mainbox">
+  		<p>Secretary Page</p>
+	</div>
+
+	<div class = "secretarylinksbox">
+		<p>Secretary Links</p>
+		<button class="secretaryButton" onclick="openTab(event, 'ListCSstudents')" id="ListCSstudentsPage"> List CS Students </button>
+		<button class="secretaryButton" onclick="openTab(event, 'ListITstudents')" id="ListITstudentsPage"> List IT Students </button>
+		<button class="secretaryButton" onclick="openTab(event, 'ListAdvisers')" id="ListAdvisersPage"> List Advisers </button>
+		<button class="secretaryButton" onclick="openTab(event, 'SignStudentToAdviser')" id="SignStudentToAdviserPage"> Sign a Student To an Adviser </button>
+		<button class="secretaryButton" onclick="openTab(event, 'ContactFaculty')" id="ContactFacultyPage"> Contact Faculty </button>
+		<button class="secretaryButton" onclick="openTab(event, 'ContactStudent')" id="ContactStudentPage"> Contact Student </button>
+	</div>
+
 </div>
 
 <div id="Chair" class="tabcontent">
-  <h3>Chair</h3>
-  <p>Chair info</p> 
+
+	<div class = "mainbox">
+  		<p>Chair Page</p>
+	</div>
+
+	<div class = "chairlinksbox">
+		<p>Chair Links</p>
+		<button class="chairButton" onclick="openTab(event, 'ListCSstudents')" id="ListCSstudentsPage"> List CS Students </button>
+		<button class="chairButton" onclick="openTab(event, 'ListITstudents')" id="ListITstudentsPage"> List IT Students </button>
+		<button class="chairButton" onclick="openTab(event, 'ListAdvisers')" id="ListAdvisersPage"> List Advisers </button>
+		<button class="chairButton" onclick="openTab(event, 'ListFacultySchedules')" id="ListFacultySchedulesPage"> List Faculty Schedules </button>
+		<button class="chairButton" onclick="openTab(event, 'EnrollaStudent')" id="EnrollaStudentPage"> Enroll a Student </button>
+		<button class="chairButton" onclick="openTab(event, 'SignStudentToAdviser')" id="SignStudentToAdviserPage"> Sign a Student To an Adviser </button>
+		<button class="chairButton" onclick="openTab(event, 'ContactFaculty')" id="ContactFacultyPage"> Contact Faculty </button>
+		<button class="chairButton" onclick="openTab(event, 'ContactStudent')" id="ContactStudentPage"> Contact Student </button>
+		<button class="chairButton" onclick="openTab(event, 'GrantOverides')" id="GrantOveridesPage"> Grant Overides </button>
+		<button class="chairButton" onclick="openTab(event, 'FindClassListing')" id="FindClassListingPage"> Find Class Listing </button>
+	</div>
+
 </div>
 
 <div id="Admin" class="tabcontent">
-  <h3>Admin</h3>
-  <p>Admin info</p>
+
+	<div class = "mainbox">
+  		<p>Admin Page</p>
+	</div>
+
+	<div class = "adminlinksbox">
+		<p>Admin Links</p>
+		<button class="adminButton" onclick="openTab(event, 'Create User')" id="CreateUserPage"> Create User </button>
+		<button class="adminButton" onclick="openTab(event, 'Delete User')" id="DeleteUserPage"> Delete User </button>
+	</div>
+
 </div>
+
+
+
+<div id="Test" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Test Page</p>
+	</div>
+
+</div>
+
+
+<!-- STUDENT LINKS -->
+<div id="ContactAdvisor" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Contact Advisor for Enrollment</p>
+	</div>
+
+</div>
+
+<div id="ListCourses" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>List of Courses</p>
+	</div>
+
+</div>
+
+<div id="RequestPIN" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Request Enrollment PIN</p>
+	</div>
+
+</div>
+
+<div id="EnrollClasses" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Enroll Classes</p>
+	</div>
+
+</div>
+
+<div id="PrintSchedule" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Print Schedule</p>
+	</div>
+
+</div>
+
+
+<!-- FACULTY LINKS -->
+<div id="ListAdvisers" class="tabcontent"> <!-- Used in Secretary and Chair -->
+
+	<div class = "mainbox">
+  		<p>List Advisers</p>
+	</div>
+
+</div>
+
+<div id="ListClasses" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>List of Classes</p>
+	</div>
+
+</div>
+
+<div id="TeachingSchedule" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Teaching Schedule</p>
+	</div>
+
+</div>
+
+<div id="ClassRosters" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Class Rosters</p>
+	</div>
+
+</div>
+
+<div id="PrintStudentSchedule" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Print Student Schedule</p>
+	</div>
+
+</div>
+
+<div id="EnrollaStudent" class="tabcontent"> <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>Enroll a Student</p>
+	</div>
+
+</div>
+
+<div id="RequestOverride" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Request Override</p>
+	</div>
+
+</div>
+
+<div id="ContactStudents" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Contact Students</p>
+	</div>
+
+</div>
+
+
+<!-- SECRETARY LINKS -->
+<div id="ListCSstudents" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>List of CS Students</p>
+	</div>
+
+</div>
+
+<div id="ListITstudents" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>List of IT Students</p>
+	</div>
+
+</div>
+
+<div id="SignStudentToAdviser" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>Sign a Student to an Advisor</p>
+	</div>
+
+</div>
+
+<div id="ContactFaculty" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>Contact Faculty</p>
+	</div>
+
+</div>
+
+<div id="ContactStudent" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>Contact Student</p>
+	</div>
+
+</div>
+
+
+<!-- CHAIR LINKS -->
+<div id="ListFacultySchedules" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>List of Faculty Teaching Schedules</p>
+	</div>
+
+</div>
+
+<div id="GrantOverides" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>Grant Overrides</p>
+	</div>
+
+</div>
+
+<div id="FindClassListing" class="tabcontent">  <!-- used in Chair -->
+
+	<div class = "mainbox">
+  		<p>Find Class Listing</p>
+	</div>
+
+</div>
+
+
+<!-- ADMIN LINKS -->
+<div id="Create User" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Create New User Page</p>
+	</div>
+
+	<div class = "createuser">
+		<p>New User Form</p>
+
+  	<form>
+		User ID: <input type = "text" name = "user_id">
+		<br><br>
+		Password: <input type = "text" name = "password">
+		<br><br>
+		User Type: <input type = "text" name = "user_type">
+  	</form>
+	<div class = "input_spacing">
+      	<form action="">
+         	<button type="submit" class = "inputUser">Create User</button>
+	</div>
+	</div>
+</div>
+
+<div id="Delete User" class="tabcontent">
+
+	<div class = "mainbox">
+  		<p>Delete User Page</p>
+	</div>
+
+	<div class = "deleteuser">
+		<p>Delete Users</p>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 function openTab(evt, TabName) {
@@ -167,6 +395,7 @@ document.getElementById("HomePage").click();
 
 document.getElementById("AdminPage").style.display = "none"; // none hides the element
 document.getElementById("AdminPage").style.display = "initial"; // initial re-enables the element
+//document.getElementById("TestPage").style.display = "none";
 //document.getElementById("StudentPage").style.display = "none";
 </script>
    
